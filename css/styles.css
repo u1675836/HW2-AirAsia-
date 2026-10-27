@@ -1,0 +1,253 @@
+/* AirAsia Rewards Redemption System - shared stylesheet
+   Linked from every page (login, card-list, card-details, card-add, card-update) */
+
+/* ---------- Base ---------- */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #1f2937;
+    background-color: #f5f6f8;
+    line-height: 1.5;
+}
+
+a {
+    color: #c8102e;
+}
+
+a:hover {
+    color: #8f0b20;
+}
+
+/* ---------- Top bar (header on every page) ---------- */
+.site-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 32px;
+    background-color: #e31e24;
+    color: #ffffff;
+}
+
+.brand {
+    font-size: 20px;
+    font-weight: 700;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.user-nav a {
+    color: #ffffff;
+}
+
+/* ---------- Main content area ---------- */
+main {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 32px 24px 48px;
+}
+
+h1 {
+    margin: 8px 0 20px;
+    font-size: 28px;
+}
+
+.back-link {
+    display: inline-block;
+    margin-bottom: 8px;
+}
+
+.page-actions {
+    margin-bottom: 8px;
+}
+
+/* ---------- Buttons ---------- */
+.btn {
+    display: inline-block;
+    padding: 10px 22px;
+    font-size: 16px;
+    font-weight: 700;
+    border-radius: 8px;
+    border: 2px solid #e31e24;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.btn-primary {
+    color: #ffffff;
+    background-color: #e31e24;
+}
+
+.btn-primary:hover {
+    color: #ffffff;
+    background-color: #b8161b;
+    border-color: #b8161b;
+}
+
+.btn-secondary {
+    color: #e31e24;
+    background-color: #ffffff;
+}
+
+.btn-secondary:hover {
+    color: #b8161b;
+    background-color: #fff1f1;
+}
+
+/* ---------- Gift card list (card-list.php) ---------- */
+.card-grid {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.gift-card {
+    background-color: #ffffff;
+    border: 1px solid #d9dde3;
+    border-radius: 12px;
+    padding: 14px;
+}
+
+.gift-card img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.gift-card h2 {
+    margin: 12px 0 4px;
+    font-size: 17px;
+}
+
+.points {
+    margin: 0;
+    color: #6b7280;
+    font-size: 14px;
+}
+
+/* ---------- Card details (card-details.php) ---------- */
+.details {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+    align-items: start;
+    background-color: #ffffff;
+    border: 1px solid #d9dde3;
+    border-radius: 12px;
+    padding: 24px;
+}
+
+.details img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.details h1 {
+    margin-top: 0;
+}
+
+.details-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.details-table th,
+.details-table td {
+    padding: 10px 12px;
+    text-align: left;
+    border: 1px solid #d9dde3;
+}
+
+.details-table th {
+    width: 40%;
+    background-color: #f1f3f5;
+}
+
+/* ---------- Forms (login, card-add, card-update) ---------- */
+.form-card {
+    max-width: 520px;
+    background-color: #ffffff;
+    border: 1px solid #d9dde3;
+    border-radius: 12px;
+    padding: 28px;
+}
+
+.login-card {
+    margin: 40px auto 0;
+}
+
+.login-card h1 {
+    text-align: center;
+}
+
+.form-field {
+    margin-bottom: 18px;
+}
+
+.form-field label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 700;
+}
+
+.form-field input,
+.form-field select {
+    width: 100%;
+    padding: 10px 12px;
+    font: inherit;
+    border: 1px solid #b8c0cc;
+    border-radius: 8px;
+    background-color: #ffffff;
+}
+
+.form-field input:focus,
+.form-field select:focus {
+    outline: 2px solid #e31e24;
+    outline-offset: 1px;
+}
+
+.form-buttons {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    margin-top: 24px;
+}
+
+.login-card .btn {
+    width: 100%;
+}
+
+/* ---------- Footer ---------- */
+.site-footer {
+    text-align: center;
+    padding: 20px;
+    color: #6b7280;
+    font-size: 14px;
+}
+
+/* ---------- Responsive layout ---------- */
+@media (max-width: 900px) {
+    .card-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .site-header {
+        padding: 12px 16px;
+    }
+
+    .card-grid,
+    .details {
+        grid-template-columns: 1fr;
+    }
+}

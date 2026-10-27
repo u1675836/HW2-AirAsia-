@@ -1,0 +1,31 @@
+AI Use - AirAsia Rewards Redemption System, HW2
+Samuel Nsimba
+
+1. AI tool used
+Claude (Anthropic).
+
+2. Prompt used
+"Using my HW1 wireframes and the HW2 instructions, build the five required pages
+(login.php, card-list.php, card-details.php, card-add.php, card-update.php) with
+HTML and one external CSS file only. Follow the required workflow, use labeled
+form fields, realistic gift-card data, and the exact filenames."
+
+3. How AI supported my work
+Claude turned each HW1 wireframe into an HTML page structure (header, main,
+footer), suggested semantic elements such as <nav>, <article>, <section> and a
+<table> with row headers for the card details, and wrote the shared stylesheet
+(css/styles.css) with a responsive grid for the gift card list. It connected the
+pages with links and form actions so the workflow is:
+  login -> card-list -> card-details -> card-update -> card-list
+  card-list -> card-add -> card-list
+I tested every link, image, and form button in Codespaces and checked each page
+against the requirements table.
+
+4. AI suggestion I tested and changed
+My HW1 wireframes include links to Add Customer, Redeem, and Delete card, plus an
+extra "card image" field on the add/update forms. When I tested the site, those
+links led to pages that do not exist in HW2, which would be broken links. I removed
+them and kept only the four fields the assignment asks for (Card Name, Card Type,
+Card Value, Points Required). Those features will be added in later homeworks.
+I also changed the login form from method="get" to method="post" so the password
+does not appear in the browser's address bar.
